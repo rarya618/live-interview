@@ -5,14 +5,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <b>Which one are you?</b>
-        <p>
+        <h1>Which one are you?</h1>
+        <h3>
           <a className="App-button App-link" href="#">Interviewer</a>
-        </p>
+        </h3>
       
-        <p>
+        <h3>
           <a className="App-button App-link" href="#">Interviewee</a>
-        </p>
+        </h3>
         
       </header>
     </div>
