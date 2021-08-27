@@ -1,22 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Which one are you?</h1>
-        <h3>
-          <a className="App-button App-link" href="#">Interviewer</a>
-        </h3>
-      
-        <h3>
-          <a className="App-button App-link" href="#">Interviewee</a>
-        </h3>
-        
-      </header>
-    </div>
-  );
+import Home from './Home'
+import Job from './Job'
+import Interview from './Interview';
+import InterviewSettings from './InterviewSettings';
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+    }
+  }
+
+  componentDidMount() {
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/Job" component={Job}/>
+            <Route path = "/Interview" component={Interview}/>
+            <Route path = "/InterviewSettings" component={InterviewSettings}/>
+          </Switch>
+        </div>
+      </BrowserRouter >
+    );
+  }
 }
 
 export default App;
