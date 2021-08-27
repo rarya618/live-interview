@@ -5,14 +5,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <b>Which one are you?</b>
         <p>
-          <a className="App-link" href="#">Interviewer</a>
+          <a className="App-button App-link" href="#">Interviewer</a>
         </p>
-        <img src={logo} className="App-logo" alt="logo" />
+      
         <p>
-          <a className="App-link" href="#">Interviewee</a>
+          <a className="App-button App-link" href="#">Interviewee</a>
         </p>
+        
       </header>
     </div>
   );
