@@ -9,8 +9,9 @@ function App() {
         <p>
           <a className="App-link" href="#">Interviewer</a>
         </p>
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <a className="App-link" href="#">Intervewee</a>
+          <a className="App-link" href="#">Interviewee</a>
         </p>
       </header>
     </div>
