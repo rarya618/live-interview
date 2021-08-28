@@ -79,7 +79,7 @@ export default class Job extends Component {
 
           </div>
 
-        <header className="App-header">
+        <header className="App-header App-side">
           <h1>Other Jobs</h1>
           {this.state.jobs.map(job=>(
             <div className="App-job-container">
