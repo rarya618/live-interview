@@ -55,19 +55,19 @@ export default class Interview extends Component {
                 <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
                 
                 <div className="App-timer">
-                <CountdownCircleTimer
-                    isPlaying= {this.state.startTimer}
-                    duration={180}
-                    colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-                    onComplete={() => {this.timesup(); return[false, 1000]}}
-                    >
-                    {({remainingTime, animatedColor})=>(
-                        <div>
-                        <span style={{fontWeight:'bold', textAlign:'center'}}>{remainingTime} </span><br></br>
-                        <span style={{fontWeight:'normal', textAlign:'center'}}>seconds <br></br>remaining</span>
-                        </div>
-                    )}
-                </CountdownCircleTimer>
+                    <CountdownCircleTimer
+                        isPlaying= {this.state.startTimer}
+                        duration={180}
+                        colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
+                        onComplete={() => {this.timesup(); return[false, 1000]}}
+                        >
+                        {({remainingTime, animatedColor})=>(
+                            <div>
+                            <span style={{fontWeight:'bold', textAlign:'center'}}>{remainingTime} </span><br></br>
+                            <span style={{fontWeight:'normal', textAlign:'center'}}>seconds <br></br>remaining</span>
+                            </div>
+                        )}
+                    </CountdownCircleTimer>
                 </div>
             </div>
         </div>

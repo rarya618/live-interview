@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './interviewsettings.css';
+import './App.css';
 
 export default class InterviewSettings extends Component {
 
@@ -12,49 +12,56 @@ export default class InterviewSettings extends Component {
 
   }
 
-
-
   render() {
     return (
-      <div id="container">
-      <div id="left_div">
-          <h1 id="page_title">Interview Settings</h1>
-          <h4>Salary: </h4>
+      <div className="App-interview-container">
+        {/* <form action="/action_page.php"> */}
 
-          <div id="photo">
-              <form action="/action_page.php">
-              <label for="img">Upload a photo of your store.</label>
-              <input type="file" id="img" name="img" accept="image/*"/>
-              <input type="submit"/>
-          </form>
+          <div className="App-interview App-left">
+
+              <h1 className="App-title">Set up an Interview</h1>
+              <h3>Salary:</h3>
+              <input className="App-input" type="number" placeholder="Salary Information"/>
+
+              <div id="photo">
+              <h3>Upload a photo of your store.</h3>
+
+                  <input className="App-input" type="file" id="add-img" accept="image/*"/>
+              </div>
+
+              <div class="description">
+                  <h3>Job Description:</h3>
+                  <textarea className="App-input textarea" name="description" placeholder="What will your job entail?"></textarea>
+              </div>
+
+
+              <div class="requirements">
+                  <h3>Job Requirements:</h3> 
+                  <textarea className="App-input textarea" name="requirements" placeholder="What requirements do you have for your potential employees?"></textarea>
+              </div>
           </div>
-          
-          <h3>Job Description:</h3>
 
-          <div class="description">
-              <div contenteditable="true">What will your job entail?</div>
-          </div>
+          <div className="App-interview App-right">
 
-          <h3>Job Requirements:</h3>
-
-          <div class="requirements">
-              <div contenteditable="true">What requirements do you have for your potential employees?</div>
-          </div> 
-      </div>
-
-      <div id="right_div">
-          <div contenteditable="true">Set a time limit for the interviews.</div>
-
-          <div class="questions">
-          
-              <h1 id="q1">Question 1</h1>
-              <div contenteditable="true">Input a question for your interviewee here.</div>
-              <h1 id="q2">Question 2</h1>
-              <div contenteditable="true">Input a question for your interviewee here.</div>
+              <div class="questions">
               
+                  <h2>Question 1</h2>
+                  <textarea className="App-input textarea" name="question-1" placeholder="Input a question for your interviewee here."></textarea>
+                  
+                  <h2>Question 2</h2>
+                  <textarea className="App-input textarea" name="question-2" placeholder="Input a question for your interviewee here."></textarea>
+
+                  <h2>Question 3</h2>
+                  <textarea className="App-input textarea" name="question-3" placeholder="Input a question for your interviewee here."></textarea>
+
+                  
+              </div>
+
+              <button className="App-button App-color-button">Submit</button>
           </div>
-      </div>
-  </div>
+        {/* </form> */}
+
+    </div>
     );
   }
 
