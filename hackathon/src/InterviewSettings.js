@@ -33,16 +33,16 @@ export default class InterviewSettings extends Component {
       "question2": this.state.questions[1], "question3": this.state.questions[2]
     };
 
-    var jobsLength = jobList.jobs.length;
+    var jobId = jobList.jobs.length;
 
-    var jobName = obj.name;
-    var jobCompanyName = obj.company;
+    var jobTitle = obj.name;
+    var company = obj.company;
     var jobDescription = obj.description;
-    var jobRequirements = obj.requirements;
-    var jobQuestions = obj.questions;
+    var requirements = obj.requirements;
+    var questions = obj.questions;
 
-    jobList.jobs.push({jobsLength, jobName, jobCompanyName, jobDescription, jobRequirements, jobQuestions})
-
+    jobList.jobs.push({jobId, jobTitle, company, jobDescription, requirements,  questions})
+    jobList.jobs.map(job=>{console.log(job)})
     // const data = JSON.stringify(obj);
     // writeFile(data)
     
@@ -96,7 +96,7 @@ export default class InterviewSettings extends Component {
                   
               </div>
 
-              <button className="App-button App-color-button" onClick={this.submitForm()}>Submit</button>
+              <button className="App-button App-color-button" onClick={()=>{this.submitForm()}}>Submit</button>
               <button onClick={event=>window.location.href='./'} className="App-button App-color-button">Back</button>
           </div>
         {/* </form> */}
