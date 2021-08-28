@@ -69,7 +69,7 @@ export default class Job extends Component {
                 <p>{this.state.jobs[this.state.jobBig]['company']}</p>
                 <p>{this.state.jobs[this.state.jobBig]['jobDescription']}</p>
                 {this.state.jobs[this.state.jobBig]['requirements'].map(req=>(
-                    <li>{req}</li>
+                    <li><input className="App-checkbox" type="checkbox" />{req}</li>
                 ))}
                 <button style={styles.button}>Start interview</button>
             </div>
@@ -79,7 +79,7 @@ export default class Job extends Component {
                     
                         <div style={styles.imgg}></div>
                         <div style={{padding:20}}>
-                            <p   style={{fontSize:'15px'}}>{job.jobTitle}</p>
+                            <p style={{fontSize:'15px'}}>{job.jobTitle}</p>
                             <p style={{fontSize:'10px'}}>{job.company}</p>
                             <p style={{fontSize:'10px'}}>{job.jobDescription}</p>
                         </div>

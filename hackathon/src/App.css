@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.5vmin);
   color: white;
 }
 
@@ -76,7 +76,7 @@
 
 .App-job-apply {
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   background: #000;
   border: solid 1px #000;
   border-radius: 5px;
@@ -110,7 +110,12 @@
   float: left;
   width: 30%;
   font-size: calc(10px + 2vmin);
+  padding: 20px 40px;
+}
 
+.App-side {
+  padding: 20px 50px;
+  overflow-x: scroll;
 }
 
 @keyframes App-logo-spin {
