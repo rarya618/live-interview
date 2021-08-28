@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
+//import {writeFile()} from "./backend.py"
+
 
 export default class InterviewSettings extends Component {
 
@@ -7,10 +9,32 @@ export default class InterviewSettings extends Component {
     super(props);
 
     this.state = {
+      salary:0,
+      description:"",
+      requirements:"",
+      question1:"",
+      question2:"",
+      question3:"",
     };
 
 
   }
+
+  addVal(e){
+    const val= e.target.value
+    const name =e.target.name
+    this.setState({[name]:val})
+  }
+  /*
+  submitForm(){
+    const obj = {"salary": this.state.salary, "description": this.state.description, 
+      "requirements": this.state.requirements.split(","), "question1": this.state.question1,
+      "question2": this.state.question2, "question3": this.state.question3
+    };
+    const data = JSON.stringify(obj);
+    writeFile(data)
+    
+  }*/
 
   render() {
     return (
@@ -21,7 +45,7 @@ export default class InterviewSettings extends Component {
 
               <h1 className="App-title">Set up an Interview</h1>
               <h3>Salary:</h3>
-              <input className="App-input" type="number" placeholder="Salary Information"/>
+              <input className="App-input" name="salary" type="number" placeholder="Salary Information" onChange={this.addVal.bind(this)}/>
 
               <div id="photo">
               <h3>Upload a photo of your store.</h3>
@@ -31,13 +55,13 @@ export default class InterviewSettings extends Component {
 
               <div class="description">
                   <h3>Job Description:</h3>
-                  <textarea className="App-input textarea" name="description" placeholder="What will your job entail?"></textarea>
+                  <textarea className="App-input textarea" name="description" onChange={this.addVal.bind(this)} placeholder="What will your job entail?"></textarea>
               </div>
 
 
               <div class="requirements">
                   <h3>Job Requirements:</h3> 
-                  <textarea className="App-input textarea" name="requirements" placeholder="What requirements do you have for your potential employees?"></textarea>
+                  <textarea className="App-input textarea" name="requirements" onChange={this.addVal.bind(this)} placeholder="What requirements do you have for your potential employees?"></textarea>
               </div>
           </div>
 
@@ -46,18 +70,18 @@ export default class InterviewSettings extends Component {
               <div class="questions">
               
                   <h2>Question 1</h2>
-                  <textarea className="App-input textarea" name="question-1" placeholder="Input a question for your interviewee here."></textarea>
+                  <textarea className="App-input textarea" name="question1" placeholder="Input a question for your interviewee here." onChange={this.addVal.bind(this)}></textarea>
                   
                   <h2>Question 2</h2>
-                  <textarea className="App-input textarea" name="question-2" placeholder="Input a question for your interviewee here."></textarea>
+                  <textarea className="App-input textarea" name="question2" placeholder="Input a question for your interviewee here." onChange={this.addVal.bind(this)}></textarea>
 
                   <h2>Question 3</h2>
-                  <textarea className="App-input textarea" name="question-3" placeholder="Input a question for your interviewee here."></textarea>
+                  <textarea className="App-input textarea" name="question3" placeholder="Input a question for your interviewee here." onChange={this.addVal.bind(this)}></textarea>
 
                   
               </div>
 
-              <button className="App-button App-color-button">Submit</button>
+              <button className="App-button App-color-button" /*onClick={this.submitForm()}*/>Submit</button>
           </div>
         {/* </form> */}
 
