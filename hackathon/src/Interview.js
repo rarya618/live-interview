@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 export default class Interview extends Component {
 
@@ -24,16 +25,34 @@ export default class Interview extends Component {
       }
   }
 
-
+  calcTime(time){
+    console.log(time);
+  }
 
   render() {
     return (
         <div className="App-interview-container">
             <div className="App-interview App-left">
+            
+                <CountdownCircleTimer
+                    isPlaying
+                    duration={100}
+                    colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
+                    onComplete={() => [false, 1000]}
+                    >
+                    {({remainingTime, animatedColor})=>(
+                        <div>
+                        <span style={{fontWeight:'bold', textAlign:'center'}}>{remainingTime} </span><br></br>
+                        <span style={{fontWeight:'normal', textAlign:'center'}}>seconds <br></br>remaining</span>
+                        </div>
+                        
+                    )}
+                </CountdownCircleTimer>
                 <div className="App-video">
                     <video autoplay="true" id="videoElement">
                     </video>
                 </div>
+                
             </div>
             <div className="App-interview App-right">
                 <h1 className="App-title">Your interview</h1>
