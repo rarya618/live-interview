@@ -54,7 +54,7 @@ export default class Interview extends Component {
                 <p className="App-text">Question 3: </p>
                 <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
                 
-                <div style={{display:'block',marginLeft:"auto",marginRight:"auto",marginTop:"20%"}}>
+                <div className="App-timer">
                 <CountdownCircleTimer
                     isPlaying= {this.state.startTimer}
                     duration={180}
