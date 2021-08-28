@@ -1,0 +1,92 @@
+div.setting{
+    float:left;
+    color:rgba(255, 255, 255, 0.685);
+  }
+  .column.left {
+    float: left;
+    padding-left:2%;
+    width: 58%;
+    height:100%;
+    background-color: rgb(255, 255, 255);
+  }
+  .column.right {
+    float:right;
+    padding-right:2%;
+    width:38%;
+    height:100%;
+    background-color: rgb(255, 255, 255);
+  }
+  h1.title{
+    text-align:center;
+    color:black;
+    font-size:50px;
+  }
+  h3.description{
+    color:black;
+    font-size:larger;
+    font-weight:500;
+  }
+  .question{
+    background-color: #ffffff;
+    border:0.1em solid #000000;
+    padding:10px;
+    font-size:20px;
+    margin-right:2vw;
+    color:black;
+  }
+  a.button8{
+    display:inline-block;
+    padding:0.2em 1.45em;
+    width: 55%;
+    padding:15px; 
+    margin-left: auto;
+    margin-right: auto;
+    border:0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Segoe UI','Roboto',sans-serif;
+    font-weight:400;
+    color:#000000;
+    font-size: medium;
+    background-color:#f1bb68;
+    text-align:center;
+    position:relative;
+  }
+  a.button9{
+    display:inline-block;
+    padding:0.2em 1.45em;
+    width: 55%;
+    padding:15px; 
+    margin-left: auto;
+    margin-right: auto;
+    border:0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Segoe UI','Roboto',sans-serif;
+    font-weight:400;
+    color:#000000;
+    font-size: medium;
+    background-color:#f1bb68;
+    text-align:center;
+    position:relative;
+  }
+  #videoElement {
+    width: 755px;
+    height: 550px;
+    background-color: #666;
+  }
+  body.blocky{
+    padding-top:5vw;
+  }
+  a.button8:hover{
+  border-color:#7a7a7a;
+  }
+  a.button8:active{
+  background-color:#999999;
+  }
+  a.button9:hover{
+    border-color:#7a7a7a;
+    }
+  a.button9:active{
+  background-color:#999999;
+  }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './App.css';
+import './interviewsettings.css';
 
 export default class InterviewSettings extends Component {
 
@@ -16,9 +16,51 @@ export default class InterviewSettings extends Component {
 
   render() {
     return (
-      <div className="App">
-      </div>
+      <div id="container">
+
+          <div id="left_div">
+              <h1><strong>Interview Settings</strong></h1>
+              <h4>Salary: </h4>
+
+              <form action="/action_page.php">
+                  <label for="img">Upload a photo of your store.</label>
+                  <input type="file" id="img" name="img" accept="image/*"/>
+                  <input type="submit"/>
+              </form>
+              
+              <h3>Job Description:</h3>
+
+              <div class="description">
+                  <label for="name">What will your job entail?</label>
+                  <input type="text" id="name" name="name"/>
+              </div>
+
+              <h3>Job Requirements:</h3>
+
+              <div class="requirements">
+                  <label for="name">What requirements do you have for your potential employees?</label>
+                  <input type="text" id="name" name="name"/>
+              </div> 
+          </div>
+
+          <div id="right_div">
+              <label for="name">Set a time limit for the interviews.</label>
+              <input type="text" id="name" name="name"/>
+
+              <div class="questions">
+                  <span style='background-color: #CFE84F;'>
+                  <h2 id="q1">Question 1</h2>
+                  <label for="name">Input a question for your interviewee here.</label>
+                  <input type="text" id="name" name="name"/>
+                  <h2 id="q2">Question 2</h2>
+                  <label for="name">Input a question for your interviewee here.</label>
+                  <input type="text" id="name" name="name"/>
+                  </span>
+              </div>
+          </div>
+        </div>
     );
   }
 
 }
+

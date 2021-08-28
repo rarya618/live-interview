@@ -1,0 +1,43 @@
+/* Interview Settings.css */
+
+
+.questions span{
+    background-color:#CFE84F;
+}
+
+.description {
+    border-style:double;
+    border-color:black;
+}
+
+.requirements {
+    border-style:double;
+    border-color:black; 
+}
+
+body, html, #container {
+    height: 100%;
+}
+    
+#left_div {
+    float:left;
+    padding-left:2%;
+    width:58%;
+    height:100%;
+    background-colour:rgb(255,255,255);
+}
+
+#right_div {
+    float:right;
+    width:40%;
+    height:100%;
+    background-color:#CFE84F;
+}
+
+#q1 {
+    background-color:white;
+}
+
+#q2 {
+    background-color: white;
+}
