@@ -62,7 +62,6 @@
   width: 30%;
   margin: 0 !important;
   padding: 0 !important;
-
 }
 
 .App-job-image img {
@@ -72,6 +71,7 @@
 
 .App-job-content {
   float: right;
+  margin: 40px 20px 40px 40px;
 }
 
 .App-job-apply {

@@ -20,9 +20,9 @@ export default class JobList extends Component {
         <header className="App-header">
           <h1>Recommended for you</h1>
           <div className="App-job-container">
-            {/* <div className="App-job-image">
-              <p><img src="https://via.placeholder.com/400"></img></p>
-            </div> */}
+            <div className="App-job-image">
+              <p><img src="https://via.placeholder.com/300"></img></p>
+            </div>
             <div className="App-job-content">
             <h2 className="App-job-title">Sample Job 1</h2>
               <p className="App-job-description">Lorem Ipsum</p>
