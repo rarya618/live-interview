@@ -8,6 +8,7 @@ export default class Interview extends Component {
     super(props);
 
     this.state = {
+        startTimer:false,
     };
 
 
@@ -28,6 +29,13 @@ export default class Interview extends Component {
   calcTime(time){
     console.log(time);
   }
+  timesup(){
+    console.log("times up")
+    window.location.href="./job"
+  }
+  startTime(){
+    this.setState({'startTimer':true})
+  }
 
   render() {
     return (
@@ -35,10 +43,10 @@ export default class Interview extends Component {
             <div className="App-interview App-left">
             
                 <CountdownCircleTimer
-                    isPlaying
-                    duration={100}
+                    isPlaying= {this.state.startTimer}
+                    duration={180}
                     colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-                    onComplete={() => [false, 1000]}
+                    onComplete={() => {this.timesup(); return[false, 1000]}}
                     >
                     {({remainingTime, animatedColor})=>(
                         <div>
@@ -60,7 +68,7 @@ export default class Interview extends Component {
                 <p className="App-text">Question 1: </p>
                 <p className="App-text">Question 2: </p>
                 <p className="App-text">Question 3: </p>
-                <a className="App-button App-color-button">Begin</a>
+                <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
             </div>
         </div>
       );

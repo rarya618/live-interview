@@ -49,7 +49,7 @@ export default class InterviewSettings extends Component {
           <input type="text" id="name" name="name"/>
 
           <div class="questions">
-              <span style='background-color: #CFE84F;'>
+              <span style={{backgroundColor: '#CFE84F'}}>
               <h1 id="q1">Question 1</h1>
               <label for="name">Input a question for your interviewee here.</label>
               <input type="text" id="name" name="name"/>
