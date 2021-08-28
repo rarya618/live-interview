@@ -25,14 +25,82 @@
 }
 
 .App-button {
-  padding: 15px 30px;
+  padding: 16px 30px;
+  margin: 12px;
   background: #fff;
+  font-size: calc(10px + 2vmin);
+  border: none;
+  border-radius: 5px;
   color: #000 !important;
   text-decoration: none;
 }
 
+.App-button:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.App-job-page {
+  background: #fff;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+
+.App-job-container {
+  background: #fff;
+  color: #000;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.App-job-container:hover {
+  padding: 20px 40px;
+}
+
+.App-job-apply {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 5px;
+  color: #fff;
+  font-size: calc(1px + 2vmin);
+  transition: 0.2s;
+}
+
+.App-job-apply:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.App-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.App-list li {
+  padding: 10px;
+}
+
+.App-checkbox {
+  margin: 10px;
+  height: calc(1px + 2vmin);
+}
+
+.App-job-page {
+  float: left;
+  width: 30%;
+  font-size: calc(10px + 2vmin);
+
 }
 
 @keyframes App-logo-spin {
