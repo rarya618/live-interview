@@ -15,7 +15,9 @@ export default class InterviewSettings extends Component {
       company:"",
       description:"",
       requirements:"",
-      questions:["","",""],
+      question1:"",
+      question2:"",
+      question3:"",
     };
 
 
@@ -29,8 +31,8 @@ export default class InterviewSettings extends Component {
   
   submitForm(){
     const obj = {"name": this.state.name, "company": this.state.company, "description": this.state.description, 
-      "requirements": this.state.requirements.split(","), "question1": this.state.questions[0],
-      "question2": this.state.questions[1], "question3": this.state.questions[2]
+      "requirements": this.state.requirements.split(","), "question1": this.state.question1,
+      "question2": this.state.question2, "question3": this.state.question3
     };
 
     var jobId = jobList.jobs.length;
@@ -39,9 +41,9 @@ export default class InterviewSettings extends Component {
     var company = obj.company;
     var jobDescription = obj.description;
     var requirements = obj.requirements;
-    var questions = obj.questions;
+    var questions = [obj.question1,obj.question2,obj.question3];
 
-    jobList.jobs.push({jobId, jobTitle, company, jobDescription, requirements,  questions})
+    jobList.jobs.push({jobId, jobTitle, company, jobDescription, requirements, questions})
     jobList.jobs.map(job=>{console.log(job)})
     // const data = JSON.stringify(obj);
     // writeFile(data)
