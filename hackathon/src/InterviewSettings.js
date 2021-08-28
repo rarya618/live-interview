@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import './App.css';
 //import {writeFile()} from "./backend.py"
 
+import {jobList} from './App';
+
 
 export default class InterviewSettings extends Component {
 
@@ -9,12 +11,11 @@ export default class InterviewSettings extends Component {
     super(props);
 
     this.state = {
-      salary:0,
+      name:"",
+      company:"",
       description:"",
       requirements:"",
-      question1:"",
-      question2:"",
-      question3:"",
+      questions:["","",""],
     };
 
 
@@ -25,16 +26,27 @@ export default class InterviewSettings extends Component {
     const name =e.target.name
     this.setState({[name]:val})
   }
-  /*
+  
   submitForm(){
-    const obj = {"salary": this.state.salary, "description": this.state.description, 
-      "requirements": this.state.requirements.split(","), "question1": this.state.question1,
-      "question2": this.state.question2, "question3": this.state.question3
+    const obj = {"name": this.state.name, "company": this.state.company, "description": this.state.description, 
+      "requirements": this.state.requirements.split(","), "question1": this.state.questions[0],
+      "question2": this.state.questions[1], "question3": this.state.questions[2]
     };
-    const data = JSON.stringify(obj);
-    writeFile(data)
+
+    var jobsLength = jobList.jobs.length;
+
+    var jobName = obj.name;
+    var jobCompanyName = obj.company;
+    var jobDescription = obj.description;
+    var jobRequirements = obj.requirements;
+    var jobQuestions = obj.questions;
+
+    jobList.jobs.push({jobsLength, jobName, jobCompanyName, jobDescription, jobRequirements, jobQuestions})
+
+    // const data = JSON.stringify(obj);
+    // writeFile(data)
     
-  }*/
+  }
 
   render() {
     return (
@@ -44,14 +56,17 @@ export default class InterviewSettings extends Component {
           <div className="App-interview App-left">
 
               <h1 className="App-title">Set up an Interview</h1>
-              <h3>Salary:</h3>
-              <input className="App-input" name="salary" type="number" placeholder="Salary Information" onChange={this.addVal.bind(this)}/>
+              <h3>Job Name:</h3>
+              <input className="App-input" name="name" type="text" placeholder="Job Name" onChange={this.addVal.bind(this)}/>
 
-              <div id="photo">
-              <h3>Upload a photo of your store.</h3>
+              <h3>Employer Name:</h3>
+              <input className="App-input" name="company" type="text" placeholder="Employer Name" onChange={this.addVal.bind(this)}/>
 
-                  <input className="App-input" type="file" id="add-img" accept="image/*"/>
-              </div>
+              {/* <div id="photo">
+                <h3>Upload a photo of your store.</h3>
+
+                <input className="App-input" type="file" id="add-img" accept="image/*"/>
+              </div> */}
 
               <div class="description">
                   <h3>Job Description:</h3>
@@ -61,7 +76,7 @@ export default class InterviewSettings extends Component {
 
               <div class="requirements">
                   <h3>Job Requirements:</h3> 
-                  <textarea className="App-input textarea" name="requirements" onChange={this.addVal.bind(this)} placeholder="What requirements do you have for your potential employees?"></textarea>
+                  <textarea className="App-input textarea" name="requirements" onChange={this.addVal.bind(this)} placeholder="What requirements do you have for your potential employees? (Use commas to separate multiple entries)"></textarea>
               </div>
           </div>
 
@@ -81,7 +96,7 @@ export default class InterviewSettings extends Component {
                   
               </div>
 
-              <button className="App-button App-color-button" /*onClick={this.submitForm()}*/>Submit</button>
+              <button className="App-button App-color-button" onClick={this.submitForm()}>Submit</button>
               <button onClick={event=>window.location.href='./'} className="App-button App-color-button">Back</button>
           </div>
         {/* </form> */}
