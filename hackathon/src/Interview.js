@@ -1,6 +1,30 @@
 import React, { Component } from "react";
 import './App.css';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { useReactMediaRecorder } from "react-media-recorder";
+
+const Video = () => {
+  const {
+    status,
+    startRecording,
+    stopRecording,
+    mediaBlobUrl,
+  } = useReactMediaRecorder({ video: true });
+
+  function saveVideo(vid){
+    console.log("this is final vid" + vid);
+  };
+  return (
+    <body>
+      <div>
+        <p className="hidden">{status}</p>
+        <button className="hidden" id="startRecord" onClick={startRecording}>Start Recording</button>
+        <button className="hidden" id="endRecord" onClick={stopRecording, saveVideo({mediaBlobUrl})}>Stop Recording</button>
+        <video className="hidden" src={mediaBlobUrl} controls autoPlay />
+      </div>
+    </body>
+  );
+};
 
 export default class Interview extends Component {
 
@@ -32,10 +56,14 @@ export default class Interview extends Component {
   timesup(){
     console.log("times up")
     alert("Your interview is over! You will be in touch with the employer soon")
+    document.getElementById("endRecord").click()
     window.location.href="./job"
+    
   }
   startTime(){
     this.setState({'startTimer':true})
+    document.getElementById("startRecord").click()
+
   }
 
   render() {
@@ -45,6 +73,7 @@ export default class Interview extends Component {
                 <div className="App-video">
                     <video autoplay="true" id="videoElement">
                     </video>
+                    <Video/>
                 </div>
             </div>
             <div className="App-interview App-right">
@@ -54,6 +83,7 @@ export default class Interview extends Component {
                 <p className="App-text">Question 2: </p>
                 <p className="App-text">Question 3: </p>
                 <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
+                <a className="App-button App-color-button" onClick={()=>this.timesup()}>End Now</a>
                 
                 <div className="App-timer">
                 <CountdownCircleTimer

@@ -148,7 +148,7 @@
   width: 100%;
   height: 100%;
   border-radius: 15px;
-}
+} 
 
 .App-left {
   background-image: linear-gradient(to bottom right, rgb(212, 230, 105), rgb(130, 174, 68));
@@ -157,12 +157,6 @@
 
 .App-right {
   float: left;
-}
-
-.App-timer {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
 }
 
 @keyframes App-logo-spin {
