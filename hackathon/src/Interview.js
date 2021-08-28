@@ -59,7 +59,7 @@ export default class Interview extends Component {
                     <CountdownCircleTimer
                         isPlaying= {this.state.startTimer}
                         duration={180}
-                        colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
+                        colors={[["rgb(212, 230, 105)", 0.33], ["#F7B801", 0.33], ["rgb(130, 174, 68)"]]}
                         onComplete={() => {this.timesup(); return[false, 1000]}}
                         >
                         {({remainingTime, animatedColor})=>(

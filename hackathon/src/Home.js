@@ -18,7 +18,7 @@ export default class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Which one are you?</h1>
+          <h1>Who are you?</h1>
           <button onClick={event=>window.location.href='./interview-settings'} className="App-button App-link">I am an Interviewer!</button>
           <button onClick={event=>window.location.href='./job'} className="App-button App-link">I am an Interviewee!</button>
           

@@ -56,10 +56,6 @@ export default class Job extends Component {
         this.setState({'jobBig': ind})
     }  
 
-  
-
-
-
   render() {
     return (
       <div className="App">
@@ -79,7 +75,7 @@ export default class Job extends Component {
 
           </div>
 
-        <header className="App-header App-side">
+        <header className="App-side">
           <h1>Other Jobs</h1>
           {this.state.jobs.map(job=>(
             <div className="App-job-container">
