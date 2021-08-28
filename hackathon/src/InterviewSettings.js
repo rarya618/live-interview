@@ -32,31 +32,26 @@ export default class InterviewSettings extends Component {
           <h3>Job Description:</h3>
 
           <div class="description">
-              <label for="name">What will your job entail?</label>
-              <input type="text" id="name" name="name"/>
+              <div contenteditable="true">What will your job entail?</div>
           </div>
 
           <h3>Job Requirements:</h3>
 
           <div class="requirements">
-              <label for="name">What requirements do you have for your potential employees?</label>
-              <input type="text" id="name" name="name"/>
+              <div contenteditable="true">What requirements do you have for your potential employees?</div>
           </div> 
       </div>
 
       <div id="right_div">
-          <label for="name">Set a time limit for the interviews.</label>
-          <input type="text" id="name" name="name"/>
+          <div contenteditable="true">Set a time limit for the interviews.</div>
 
           <div class="questions">
-              <span style={{backgroundColor: '#CFE84F'}}>
+          
               <h1 id="q1">Question 1</h1>
-              <label for="name">Input a question for your interviewee here.</label>
-              <input type="text" id="name" name="name"/>
+              <div contenteditable="true">Input a question for your interviewee here.</div>
               <h1 id="q2">Question 2</h1>
-              <label for="name">Input a question for your interviewee here.</label>
-              <input type="text" id="name" name="name"/>
-              </span>
+              <div contenteditable="true">Input a question for your interviewee here.</div>
+              
           </div>
       </div>
   </div>
