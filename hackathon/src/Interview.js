@@ -31,6 +31,7 @@ export default class Interview extends Component {
   }
   timesup(){
     console.log("times up")
+    alert("Your interview is over! You will be in touch with the employer soon")
     window.location.href="./job"
   }
   startTime(){
@@ -57,7 +58,7 @@ export default class Interview extends Component {
                 <div className="App-timer">
                 <CountdownCircleTimer
                     isPlaying= {this.state.startTimer}
-                    duration={180}
+                    duration={10}
                     colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
                     onComplete={() => {this.timesup(); return[false, 1000]}}
                     >
