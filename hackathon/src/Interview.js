@@ -86,6 +86,7 @@ export default class Interview extends Component {
                 <p style={{fontStyle:'italic'}} className="App-text">Question 3: What are your salary expectations?</p><br></br>
                 <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
                 <a className="App-button App-color-button" onClick={()=>this.timesup()}>End Now</a>
+                <a className="App-button App-color-button" onClick={event=>window.location.href='./job'}>Back</a>
                 
                 <div className="App-timer">
                     <CountdownCircleTimer
