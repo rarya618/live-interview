@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
 
-export default class JobList extends Component {
+export default class Job1 extends Component {
 
   constructor(props) {
     super(props);
@@ -17,18 +17,23 @@ export default class JobList extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Recommended for you</h1>
-          <div className="App-job-container">
-            {/* <div className="App-job-image">
-              <p><img src="https://via.placeholder.com/400"></img></p>
-            </div> */}
-            <div className="App-job-content">
-            <h2 className="App-job-title">Sample Job 1</h2>
-              <p className="App-job-description">Lorem Ipsum</p>
-              <button onClick={event=>window.location.href='./job-1'} className="App-job-apply">Apply</button>
-            </div>
+          <div className="App-page">
+            <h2>Sample Job 1</h2>
+            <p>Salary: 100k</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adip</p>
+            
+            <h3>Requirements:</h3>
+            <ul className="App-list" type="circle">
+              <li><input className="App-checkbox" type="checkbox" />Requirement 1</li>
+              <li><input className="App-checkbox" type="checkbox" />Requirement 2</li>
+              <li><input className="App-checkbox" type="checkbox" />Requirement 3</li>
+            </ul>
+            <button className="App-job-apply">Begin Interview</button>
+
           </div>
+
+        <header className="App-header">
+          <h1>Other Jobs</h1>
           <div className="App-job-container">
             <h2 className="App-job-title">Sample Job 2</h2>
             <p className="App-job-description">Job Description</p>
