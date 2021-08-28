@@ -177,7 +177,6 @@
   font-size: calc(10px + 1.2vmin);
   padding: 10px 3%;
   background: #fff;
-  font-family: sans-serif;
   resize: none;
   min-height: 30px;
   border: solid 1px #ccc;
@@ -219,10 +218,20 @@ input[type=file]::file-selector-button {
   .App-page {
     width: auto;
   }
+
+  .App-left, .App-right {
+    width: 90%;
+    padding: 20px 5%;
+    height: auto;
+  }
+
   .App-job-container {
     padding: 0px 15px;
     margin: 10px 2.5px;
     width: 80%;
+  }
+  .App-interview-container {
+    overflow: scroll;
   }
 }
 
