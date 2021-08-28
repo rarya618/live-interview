@@ -16,8 +16,8 @@ export default class Interview extends Component {
 
   render() {
     return (
-      <div className="App">
-      </div>
+        <div></div>
+      
     );
   }
 
