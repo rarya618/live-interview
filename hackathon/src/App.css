@@ -159,6 +159,13 @@
   float: left;
 }
 
+.App-timer {
+  position: relative;
+  left: 30%;
+  bottom: -40px;
+  float: left;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
