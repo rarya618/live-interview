@@ -85,7 +85,7 @@ export default class Job extends Component {
             <div className="App-job-container">
               <h2 className="App-job-title">{job.jobTitle}</h2>
               <p className="App-job-description">{job.jobDescription}</p>
-              <button onClick={()=>this.jobDetails(job.jobId)} className="App-job-apply">Apply</button>
+              <button onClick={()=>this.jobDetails(job.jobId)} className="App-job-apply">Show More</button>
             </div>
           ))}
         </header>
