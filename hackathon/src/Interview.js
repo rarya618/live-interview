@@ -17,8 +17,9 @@ const Video = () => {
   };
   return (
     <body>
+    <p style={{textAlign:'center', fontSize:'15px',fontStyle:'italic'}}>{status}</p>
       <div className="hidden">
-        <p>{status}</p>
+        
         <button id="startRecord" onClick={startRecording}>Start Recording</button>
         <button id="endRecord" onClick={stopRecording, saveVideo({mediaBlobUrl})}>Stop Recording</button>
         <video src={mediaBlobUrl} controls autoPlay />
@@ -79,10 +80,10 @@ export default class Interview extends Component {
             </div>
             <div className="App-interview App-right">
                 <h1 className="App-title">Your interview</h1>
-                <h3 className="App-description">Your interview will begin when you click begin, you will have 3 minutes to complete your interview</h3>
-                <p className="App-text">Question 1: </p>
-                <p className="App-text">Question 2: </p>
-                <p className="App-text">Question 3: </p>
+                <h3 className="App-description">Your interview will begin when you click begin, you will have 3 minutes to complete your interview</h3><br></br>
+                <p style={{fontStyle:'italic'}} className="App-text">Question 1: Tell me about yourself and your work experience.</p>
+                <p style={{fontStyle:'italic'}} className="App-text">Question 2: Why are you the right fit to succeed in this role?</p>
+                <p style={{fontStyle:'italic'}} className="App-text">Question 3: What are your salary expectations?</p><br></br>
                 <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
                 <a className="App-button App-color-button" onClick={()=>this.timesup()}>End Now</a>
                 
