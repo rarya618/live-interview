@@ -22,9 +22,11 @@ div.setting{
     font-size:50px;
   }
   h3.description{
-    color:black;
     font-size:larger;
     font-weight:500;
+  }
+  .container{
+      padding-top: 5vw;
   }
   .question{
     background-color: #ffffff;
