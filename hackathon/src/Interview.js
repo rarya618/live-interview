@@ -30,7 +30,7 @@ export default class Interview extends Component {
     return (
         <div class="setting">
             <div class="column left">
-                <div id="container">
+                <div class="container">
                     <video autoplay="true" id="videoElement">
                     </video>
                 </div>
