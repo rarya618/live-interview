@@ -31,6 +31,7 @@ export default class Interview extends Component {
   }
   timesup(){
     console.log("times up")
+    alert("Your interview is over! You will be in touch with the employer soon")
     window.location.href="./job"
   }
   startTime(){
