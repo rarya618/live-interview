@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
 import Home from './Home'
+import JobList from './JobList'
 import Job from './Job'
 import Interview from './Interview';
 import InterviewSettings from './InterviewSettings';
@@ -23,9 +24,10 @@ class App extends React.Component {
         <div>
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/Job" component={Job}/>
-            <Route path = "/Interview" component={Interview}/>
-            <Route path = "/InterviewSettings" component={InterviewSettings}/>
+            <Route path="/job-list" component={JobList} />
+            <Route path="/job" component={Job}/>
+            <Route path = "/interview" component={Interview}/>
+            <Route path = "/interview-settings" component={InterviewSettings}/>
           </Switch>
         </div>
       </BrowserRouter >
