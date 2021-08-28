@@ -79,13 +79,13 @@ export default class Interview extends Component {
                 </div>
             </div>
             <div className="App-interview App-right">
-                <h1 className="App-title">Your interview</h1>
-                <h3 className="App-description">Your interview will begin when you click begin, you will have 3 minutes to complete your interview</h3><br></br>
+                <h1 className="App-title">Your Interview</h1>
+                <h3 className="App-description">You have 3 minutes to answer the following questions:</h3>
                 <p style={{fontStyle:'italic'}} className="App-text">Question 1: Tell me about yourself and your work experience.</p>
                 <p style={{fontStyle:'italic'}} className="App-text">Question 2: Why are you the right fit to succeed in this role?</p>
                 <p style={{fontStyle:'italic'}} className="App-text">Question 3: What are your salary expectations?</p><br></br>
-                <a className="App-button App-color-button" onClick={()=>this.startTime()}>Begin</a>
-                <a className="App-button App-color-button" onClick={()=>this.timesup()}>End Now</a>
+                <a className="App-button App-color-button" onClick={()=>this.startTime()}>Start</a>
+                <a className="App-button App-color-button" onClick={()=>this.timesup()}>End</a>
                 <a className="App-button App-color-button" onClick={event=>window.location.href='./job'}>Back</a>
                 
                 <div className="App-timer">

@@ -82,6 +82,7 @@ export default class InterviewSettings extends Component {
               </div>
 
               <button className="App-button App-color-button" /*onClick={this.submitForm()}*/>Submit</button>
+              <button onClick={event=>window.location.href='./'} className="App-button App-color-button">Back</button>
           </div>
         {/* </form> */}
 

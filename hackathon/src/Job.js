@@ -72,6 +72,7 @@ export default class Job extends Component {
           ))}
             </ul>
             <button onClick={event=>window.location.href='./interview'} className="App-job-apply">Begin Interview</button>
+            <button onClick={event=>window.location.href='./'} className="App-job-apply">Back</button>
 
           </div>
 
