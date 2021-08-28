@@ -160,10 +160,9 @@
 }
 
 .App-timer {
-  position: relative;
-  left: 30%;
-  bottom: -40px;
-  float: left;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
 
 @keyframes App-logo-spin {
