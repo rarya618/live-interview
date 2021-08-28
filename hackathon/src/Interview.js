@@ -17,11 +17,11 @@ const Video = () => {
   };
   return (
     <body>
-      <div>
-        <p className="hidden">{status}</p>
-        <button className="hidden" id="startRecord" onClick={startRecording}>Start Recording</button>
-        <button className="hidden" id="endRecord" onClick={stopRecording, saveVideo({mediaBlobUrl})}>Stop Recording</button>
-        <video className="hidden" src={mediaBlobUrl} controls autoPlay />
+      <div className="hidden">
+        <p>{status}</p>
+        <button id="startRecord" onClick={startRecording}>Start Recording</button>
+        <button id="endRecord" onClick={stopRecording, saveVideo({mediaBlobUrl})}>Stop Recording</button>
+        <video src={mediaBlobUrl} controls autoPlay />
       </div>
     </body>
   );
@@ -56,7 +56,7 @@ export default class Interview extends Component {
   }
   timesup(){
     console.log("times up")
-    alert("Your interview is over! You will be in touch with the employer soon")
+    alert("Your interview is over! If successful, the employer will contact you.")
     document.getElementById("endRecord").click()
     window.location.href="./job"
     
