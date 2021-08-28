@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './interview.css';
+import './App.css';
 
 export default class Interview extends Component {
 
@@ -28,21 +28,20 @@ export default class Interview extends Component {
 
   render() {
     return (
-        <div class="setting">
-            <div class="column left">
-                <div class="container">
+        <div className="App-interview-container">
+            <div className="App-interview App-left">
+                <div className="App-video">
                     <video autoplay="true" id="videoElement">
                     </video>
                 </div>
             </div>
-            <div class="column right">
-                <h1 class ="title">Your interview</h1><br></br>
-                <h3 class = "description">Your interview will begin when you click begin, you will have 3 minutes to complete your interview</h3>
-                <br></br>
-                <p class="question">Question 1: </p>
-                <p class="question">Question 1: </p>
-                <p class="question">Question 1: </p>
-                <a class="button8">BEGIN</a>
+            <div className="App-interview App-right">
+                <h1 className="App-title">Your interview</h1>
+                <h3 className="App-description">Your interview will begin when you click begin, you will have 3 minutes to complete your interview</h3>
+                <p className="App-text">Question 1: </p>
+                <p className="App-text">Question 2: </p>
+                <p className="App-text">Question 3: </p>
+                <a className="App-button App-color-button">Begin</a>
             </div>
         </div>
       );
