@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
 
-export default class Job extends Component {
+export default class Job1 extends Component {
 
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ export default class Job extends Component {
     return (
       <div className="App">
           <div className="App-page">
-            <h2>Sample Job 2</h2>
+            <h2>Sample Job 1</h2>
             <p>Salary: 100k</p>
             <p>Lorem ipsum dolor sit amet, consectetur adip</p>
             
@@ -35,9 +35,9 @@ export default class Job extends Component {
         <header className="App-header">
           <h1>Other Jobs</h1>
           <div className="App-job-container">
-            <h2 className="App-job-title">Sample Job 1</h2>
+            <h2 className="App-job-title">Sample Job 2</h2>
             <p className="App-job-description">Job Description</p>
-            <button onClick={event=>window.location.href='./job-1'} className="App-job-apply">Apply</button>
+            <button onClick={event=>window.location.href='./job'} className="App-job-apply">Apply</button>
           </div>
           <div className="App-job-container">
             <h2 className="App-job-title">Sample Job 3</h2>
